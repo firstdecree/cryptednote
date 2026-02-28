@@ -79,6 +79,8 @@
 
     web.post("/api/open-pad", async(req, res)=>{
         var { primaryKey, code, password, location } = req.body
+        if(!primaryKey || !code || !password || !location) return res.send("0")
+        primaryKey = primaryKey.slice(0, 500); code = code.slice(0, 500); password = password.slice(0, 500); location = location.slice(0, 500);
         const realPassword = `${primaryKey}${code}${password}`
         primaryKey = SHA512(primaryKey); code = SHA512(code); password = SHA512(password); location = `${SHA512(location)}${settings.security.garbageKey}`
         location = `${primaryKey}${code}${location}`
