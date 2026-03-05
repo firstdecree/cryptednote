@@ -4,7 +4,7 @@ Anonymously and Securely save notes anytime with ease.
 # ⚙️ Installations
 ## Github
 ```
-git clone https://github.com/ncryptsion/cryptednote.git
+git clone https://github.com/firstdecree/cryptednote.git
 ```
 
 ## NpmJS
