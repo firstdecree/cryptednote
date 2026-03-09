@@ -53,7 +53,7 @@
     // Configurations
     //* Express
     web.use(limiter)
-    web.use(helmet.xssFilter(), helmet.xDnsPrefetchControl(), helmet.xXssProtection(), helmet.hidePoweredBy(), helmet.frameguard({ action: "deny" }), helmet.noSniff(), helmet.hsts(), helmet.referrerPolicy())
+    web.use(helmet({ contentSecurityPolicy: false }))
     web.set("trust proxy", 1)
     web.use(cookieParser())
     web.use(compression({ level: 1 }))
