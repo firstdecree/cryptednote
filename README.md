@@ -42,3 +42,7 @@ node index.js
         </td>
     </tr>
 </table>
+
+<div align="center">
+  <sub>This project is distributed under <a href="/LICENSE"><b>MIT License</b></a></sub>
+</div>
